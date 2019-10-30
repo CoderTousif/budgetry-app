@@ -19,6 +19,8 @@ const budgetController = (function () {
         expPercentage(totalIncome) {
             if (totalIncome > 0) {
                 this.percentage = Math.round((this.amount / totalIncome) * 100);
+            } else {
+                this.percentage = -1;
             }
             return this.percentage;
         }
